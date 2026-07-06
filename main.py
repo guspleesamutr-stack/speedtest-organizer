@@ -13,6 +13,8 @@
 #
 # =========================================================
 
+from core.constants import *
+
 import os
 import shutil
 import customtkinter as ctk
