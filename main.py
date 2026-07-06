@@ -27,7 +27,7 @@ from tkinterdnd2 import DND_FILES, TkinterDnD
 # Local
 from core.constants import *
 from core.folder import get_mesh_folder
-
+from core.filename import build_standalone_filename
 
 # =========================================================
 # CONFIG
