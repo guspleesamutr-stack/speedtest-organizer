@@ -649,28 +649,10 @@ class SpeedtestOrganizer(TkinterDnD.Tk):
                 else "Star"
             )
 
-            backhaul = self.mesh_backhaul.get()
-            router = self.mesh_router.get()
-
-            backhaul_index = (
-            BACKHAULS.index(backhaul) + 1
+            folder = get_mesh_folder(
+                topology,
+                backhaul
             )
-
-            index_text = str(backhaul_index).zfill(2)
-
-            if topology == "DC":
-
-                folder = (
-                    f"01_{index_text} "
-                    f"Mesh_DC_{backhaul}"
-                )
-
-            else:
-
-                folder = (
-                    f"02_{index_text} "
-                    f"Mesh_Star_{backhaul}"
-                )
 
             if self.mesh_test_type.get() == "WiFi":
 
