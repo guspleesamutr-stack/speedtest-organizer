@@ -29,6 +29,11 @@ from core.constants import *
 from core.folder import get_mesh_folder
 from core.filename import build_standalone_filename
 
+from core.filename import (
+    build_standalone_filename,
+    build_mesh_wifi_filename,
+)
+
 # =========================================================
 # CONFIG
 # =========================================================
