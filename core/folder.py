@@ -3,9 +3,9 @@ Folder generation utilities.
 """
 
 
-def get_mesh_folder(topology, backhaul):
+def get_mesh_folder(topology: str, backhaul: str) -> str:
     """
-    Return output folder name for Mesh mode.
+    Return folder name for Mesh mode.
     """
 
     if topology == "DC":
