@@ -2,9 +2,13 @@
 Application constants.
 """
 
+# =====================================================
+# Application
+# =====================================================
+
 APP_NAME = "Speedtest Organizer"
 
-VERSION = "V6 Development"
+VERSION = "6.0.0-dev"
 
 HOVER_DELAY = 200
 
