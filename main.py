@@ -13,16 +13,19 @@
 #
 # =========================================================
 
-from core.constants import *
-
+# Standard Library
 import os
 import shutil
-import customtkinter as ctk
 
+# Third-party
+import customtkinter as ctk
 from PIL import Image
 from tkinter import filedialog
 from tkinter import messagebox
 from tkinterdnd2 import DND_FILES, TkinterDnD
+
+# Local
+from core.constants import *
 
 
 # =========================================================
