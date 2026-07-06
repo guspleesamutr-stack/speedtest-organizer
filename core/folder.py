@@ -1,6 +1,4 @@
-"""
-Folder generation utilities.
-"""
+from core.constants import BACKHAULS
 
 
 def get_mesh_folder(topology: str, backhaul: str) -> str:
@@ -8,7 +6,10 @@ def get_mesh_folder(topology: str, backhaul: str) -> str:
     Return folder name for Mesh mode.
     """
 
-    if topology == "DC":
-        return f"01.1 Mesh_DC_{backhaul}"
+    backhaul_index = BACKHAULS.index(backhaul) + 1
+    index_text = str(backhaul_index).zfill(2)
 
-    return f"02.1 Mesh_Star_{backhaul}"
+    if topology == "DC":
+        return f"01_{index_text} Mesh_DC_{backhaul}"
+
+    return f"02_{index_text} Mesh_Star_{backhaul}"
