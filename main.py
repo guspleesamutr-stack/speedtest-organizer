@@ -626,18 +626,12 @@ class SpeedtestOrganizer(TkinterDnD.Tk):
                 if custom:
                     device = custom
 
-            filename = (
-                f"SA_"
-                f"{distance}_"
-                f"{self.sa_band.get()}_"
-                f"{device}"
+           filename = build_standalone_filename(
+                distance=distance,
+                band=self.sa_band.get(),
+                device=device,
+                channel=self.sa_channel.get(),
             )
-
-            if self.sa_channel.get():
-
-                filename += (
-                    f"_CH{self.sa_channel.get()}"
-                )
 
             folder = "00. Standalone"
 
