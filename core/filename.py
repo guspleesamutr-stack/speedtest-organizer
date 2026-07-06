@@ -1,16 +1,22 @@
 """
-Filename utility.
-
-This module is responsible for generating
-folder names and filenames.
+Filename generation utilities.
 """
 
 
-def build_filename():
-    """
-    Placeholder function.
+def build_standalone_filename(
+    distance,
+    band,
+    device,
+    channel,
+):
+    filename = (
+        f"SA_"
+        f"{distance}_"
+        f"{band}_"
+        f"{device}"
+    )
 
-    The actual implementation will be moved
-    from main.py in the next step.
-    """
-    pass
+    if channel:
+        filename += f"_CH{channel}"
+
+    return filename
